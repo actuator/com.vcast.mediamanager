@@ -11,11 +11,10 @@
 | Coordinator | VulnCheck Submission ID: `ee7a170b-173a-47d1-b160-2125fafceadd` |
 | Vendor / codebase | Verizon |
 | Product / package | Verizon Cloud for Android - `com.vcast.mediamanager` |
-| Version tested | `25.2.12` (`versionCode 2025021200`); `minSdk 29`, `targetSdk 35` |
+| Version | `25.2.12` (`versionCode 2025021200`); `minSdk 29`, `targetSdk 35` |
 | Vulnerability class | CWE-22 Path Traversal ("Dirty Stream") |
 | Proven impact | Arbitrary attacker file injected into the victim's Verizon Cloud account |
-| Status: | Fixed |
-| Version introducing remediation | **26.7.10** |
+| Status: | [Fixed] Remediation in Ver **26.7.10** |
 
 <img width="1321" height="939" alt="vzCloudPOC" src="https://github.com/user-attachments/assets/1a68d1ef-0a67-4d6b-b271-bab94a82aee8" />
 
@@ -116,15 +115,11 @@ The destination file name is sender-controlled content metadata (`_display_name`
 
 The resulting staged file is then trusted by the upload pipeline.
 
-## Remediation
-
-The following mitigations address the vulnerable copy sink:
-
 1. Reduce the sender-supplied name to its basename with `new File(name).getName()` and reject names containing path separators or NUL.
 2. Enforce canonical-path containment: `getCanonicalPath().startsWith(stagingDir)`, otherwise abort.
 3. Prefer an application-generated UUID for the staging filename and treat `_display_name` only as display metadata.
 
-A single sanitizer at the copy sink covers both entry points.
+
 
 ---
 
