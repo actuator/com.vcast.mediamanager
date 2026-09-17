@@ -1,4 +1,4 @@
-# Verizon Cloud (Android) - "Dirty Stream" Path Traversal (CWE-22) to Arbitrary File Write on Verizon Cloud Storage
+# Verizon Cloud (Android) - "Dirty Stream" Path Traversal to Arbitrary File Write on Verizon Cloud Storage
 
 > **Security Advisory**  
 > Coordinated through VulnCheck.
