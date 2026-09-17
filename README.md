@@ -14,6 +14,7 @@
 | Version tested | `25.2.12` (`versionCode 2025021200`); `minSdk 29`, `targetSdk 35` |
 | Vulnerability class | CWE-22 Path Traversal ("Dirty Stream") |
 | Proven impact | Arbitrary attacker file injected into the victim's Verizon Cloud account |
+| Status: | Fixed |
 | Version introducing remediation | **26.7.10** |
 
 <img width="1321" height="939" alt="vzCloudPOC" src="https://github.com/user-attachments/assets/1a68d1ef-0a67-4d6b-b271-bab94a82aee8" />
