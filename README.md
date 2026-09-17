@@ -1,4 +1,4 @@
-# Verizon Cloud (Android) - "Dirty Stream" Path Traversal to Arbitrary File Write on Verizon Cloud Storage
+# Verizon Cloud (Android) - "Dirty Stream" Arbitrary File Write on Verizon Cloud Storage
 
 > **Security Advisory**  
 > Coordinated through VulnCheck.
@@ -12,7 +12,7 @@
 | Vendor / codebase | Verizon |
 | Product / package | Verizon Cloud for Android - `com.vcast.mediamanager` |
 | Version | `25.2.12` (`versionCode 2025021200`); `minSdk 29`, `targetSdk 35` |
-| Vulnerability class | CWE-22 Path Traversal ("Dirty Stream") |
+| Vulnerability class | CWE-22 Path Traversal |
 | Proven impact | Arbitrary attacker file injected into the victim's Verizon Cloud account |
 | Status: | [Fixed] Remediation in Ver **26.7.10** |
 
